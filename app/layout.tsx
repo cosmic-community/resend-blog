@@ -50,6 +50,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <div className="pointer-events-none fixed inset-0 z-0 bg-noise opacity-[0.03]" />
         <div className="relative z-10 flex min-h-screen flex-col">
+          {/* Disclaimer banner */}
+          <div
+            role="note"
+            className="border-b border-amber-500/20 bg-amber-500/10 px-6 py-2 text-center text-xs font-medium text-amber-200 sm:text-sm"
+          >
+            This site is not affiliated with Resend and is for demo purposes only.
+          </div>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
