@@ -3,6 +3,10 @@ import { getAllBlogPostsList } from '@/lib/cosmic'
 import FeaturedPost from '@/components/FeaturedPost'
 import PostGrid from '@/components/PostGrid'
 
+// Re-fetch content from Cosmic at most every 60 seconds so newly
+// published or edited posts show up without a rebuild.
+export const revalidate = 60
+
 export const metadata: Metadata = {
   title: 'Resend Blog — Insights for developers',
   description:

@@ -12,6 +12,9 @@ import {
 import MarkdownContent from '@/components/MarkdownContent'
 import RelatedPosts from '@/components/RelatedPosts'
 
+// Re-fetch content from Cosmic at most every 60 seconds.
+export const revalidate = 60
+
 interface PageProps {
   params: Promise<{ slug: string }>
 }
